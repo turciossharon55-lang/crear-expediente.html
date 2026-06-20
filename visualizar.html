@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntegraSalud - Visualizar Expediente</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #f4f6f9; padding: 20px; display: flex; justify-content: center; }
+        .container { width: 100%; max-width: 700px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); overflow: hidden; }
+        
+        /* Encabezado Azul */
+        .header { background-color: #0056b3; padding: 20px; text-align: center; color: white; }
+        .header h1 { font-size: 24px; margin-bottom: 15px; }
+        .nav-buttons { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .btn-nav { background-color: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold; text-decoration: none; }
+        .btn-nav:hover { background-color: rgba(255, 255, 255, 0.4); }
+        .btn-nav.active { background-color: #00bcd4; } /* Azul claro para la pestaña activa */
+
+        /* Barra de Búsqueda */
+        .search-container { background-color: #e9ecef; padding: 15px 25px; display: flex; gap: 10px; align-items: center; border-bottom: 1px solid #dee2e6; }
+        .search-input { flex: 1; padding: 10px; border: 1px solid #ced4da; border-radius: 4px; font-size: 14px; }
+        .btn-search { background-color: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        .btn-search:hover { background-color: #0056b3; }
+
+        /* Cuerpo de la Información */
+        .content-body { padding: 25px; }
+        .section-title { font-size: 14px; color: #0056b3; font-weight: bold; letter-spacing: 1px; margin: 20px 0 10px 0; border-bottom: 1px dashed #ced4da; padding-bottom: 4px; }
+        .section-title:first-of-type { margin-top: 0; }
+        
+        /* Formato de los datos mostrados */
+        .data-group { margin-bottom: 8px; font-size: 14px; color: #333; line-height: 1.5; }
+        .data-label { font-weight: bold; color: #555; display: inline-block; width: 160px; }
+        
+        /* Bloques de texto largo */
+        .text-block { background-color: #f8f9fa; border-left: 4px solid #0056b3; padding: 10px; margin-top: 5px; border-radius: 0 4px 4px 0; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Encabezado con pestañas de navegación -->
+    <div class="header">
+        <h1>IntegraSalud</h1>
+        <div class="nav-buttons">
+            <a href="index.html" class="btn-nav">Crear Expediente</a>
+            <button class="btn-nav active">Visualizar Expediente</button>
+            <button class="btn-nav">Editar Expediente</button>
+            <button class="btn-nav">Nueva Consulta</button>
+        </div>
+    </div>
+
+    <!-- Barra de búsqueda por Cédula -->
+    <div class="search-container">
+        <input type="text" class="search-input" value="281-050402-100D" placeholder="Buscar por cédula...">
+        <button class="btn-search">Buscar</button>
+    </div>
+
+    <!-- Vista de Datos del Expediente -->
+    <div class="content-body">
+        
+        <div class="section-title">***** DATOS PACIENTE *****</div>
+        <div class="data-group"><span class="data-label">Cédula:</span>281-050402-100D</div>
+        <div class="data-group"><span class="data-label">Nombre:</span>Sophia Torres</div>
+        <div class="data-group"><span class="data-label">Sexo:</span>Femenino</div>
+        <div class="data-group"><span class="data-label">Edad:</span>24</div>
+        <div class="data-group"><span class="data-label">Fecha nacimiento:</span>05/04/2002</div>
+        <div class="data-group"><span class="data-label">Estado civil:</span>Soltera</div>
+        <div class="data-group"><span class="data-label">Ocupación:</span>Estudiante</div>
+        <div class="data-group"><span class="data-label">Teléfono:</span>98745638</div>
+        <div class="data-group"><span class="data-label">Dirección:</span>Jinotega</div>
+        <div class="data-group"><span class="data-label">Contacto emergencia:</span>63489756</div>
+
+        <div class="section-title">***** CONSULTA 1 *****</div>
+        <div class="data-group"><span class="data-label">Fecha:</span>08/05/2026</div>
+        <div class="data-group"><span class="data-label">Hora:</span>11 pm</div>
+        <div class="data-group"><span class="data-label">Médico:</span>Alonso Salazar</div>
+        <div class="data-group"><span class="data-label">Motivo consulta:</span>Fuertes dolores en el pecho</div>
+
+        <div class="section-title">Historial</div>
+        <div class="text-block">El paciente lleva medio año sufriendo de dolores que comprimen su pecho múltiples veces.</div>
+
+        <div class="section-title">Observaciones</div>
+        <div class="text-block">No se detecta taquicardia, pero aun así es una situación muy sospechosa.</div>
+
+        <div class="section-title">Medicación</div>
+        <div class="text-block">Aspirina forte, 1 tableta cada 8 horas.</div>
+
+    </div>
+</div>
+
+</body>
+</html>
