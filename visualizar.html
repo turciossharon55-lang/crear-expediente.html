@@ -15,7 +15,7 @@
         .nav-buttons { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
         .btn-nav { background-color: rgba(255, 255, 255, 0.2); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: bold; text-decoration: none; }
         .btn-nav:hover { background-color: rgba(255, 255, 255, 0.4); }
-        .btn-nav.active { background-color: #00bcd4; } /* Azul claro para la pestaña activa */
+        .btn-nav.active { background-color: #00bcd4; }
 
         /* Barra de Búsqueda */
         .search-container { background-color: #e9ecef; padding: 15px 25px; display: flex; gap: 10px; align-items: center; border-bottom: 1px solid #dee2e6; }
@@ -39,7 +39,6 @@
 <body>
 
 <div class="container">
-    <!-- Encabezado con pestañas de navegación -->
     <div class="header">
         <h1>IntegraSalud</h1>
         <div class="nav-buttons">
@@ -50,16 +49,14 @@
         </div>
     </div>
 
-    <!-- Barra de búsqueda por Cédula -->
     <div class="search-container">
         <input type="text" class="search-input" value="281-050402-100D" placeholder="Buscar por cédula...">
         <button class="btn-search">Buscar</button>
     </div>
 
-    <!-- Vista de Datos del Expediente -->
     <div class="content-body">
         
-        <div class="section-title">***** DATOS PACIENTE *****</div>
+        <div class="section-title">DATOS PACIENTE</div>
         <div class="data-group"><span class="data-label">Cédula:</span>281-050402-100D</div>
         <div class="data-group"><span class="data-label">Nombre:</span>Sophia Torres</div>
         <div class="data-group"><span class="data-label">Sexo:</span>Femenino</div>
@@ -71,7 +68,7 @@
         <div class="data-group"><span class="data-label">Dirección:</span>Jinotega</div>
         <div class="data-group"><span class="data-label">Contacto emergencia:</span>63489756</div>
 
-        <div class="section-title">***** CONSULTA 1 *****</div>
+        <div class="section-title">CONSULTA 1</div>
         <div class="data-group"><span class="data-label">Fecha:</span>08/05/2026</div>
         <div class="data-group"><span class="data-label">Hora:</span>11 pm</div>
         <div class="data-group"><span class="data-label">Médico:</span>Alonso Salazar</div>
